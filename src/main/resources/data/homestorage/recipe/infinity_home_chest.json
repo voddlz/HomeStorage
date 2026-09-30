@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "minecraft:iron_block",
+    "L": "minecraft:lapis_lazuli",
+    "R": "minecraft:redstone",
+    "A": "homestorage:infinity_access_chest"
+  },
+  "pattern": [
+    "BLB",
+    "RAR",
+    "BLB"
+  ],
+  "result": {
+    "id": "homestorage:infinity_home_chest"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "homestorage:block/infinity_home_chest_top",
+    "bottom": "homestorage:block/infinity_home_chest_bottom",
+    "side": "homestorage:block/infinity_home_chest_side"
+  }
+}
