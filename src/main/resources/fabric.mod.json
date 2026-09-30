@@ -8,8 +8,9 @@
 		"leekwater"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/voddlz/HomeStorage",
+		"sources": "https://github.com/voddlz/HomeStorage",
+		"issues": "https://github.com/voddlz/HomeStorage/issues"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/homestorage/icon.png",

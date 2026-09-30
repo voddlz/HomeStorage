@@ -1,9 +1,11 @@
 package com.leekwater.homestorage;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.CreativeModeTabs;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,6 +38,12 @@ public class HomeStorage implements ModInitializer {
 		ModNetworking.init();
 		BlockProtection.init();
 		HomeCommands.init();
+
+		// List both chests in the Functional Blocks tab of the creative inventory (next to vanilla's chests).
+		CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(output -> {
+			output.accept(ModBlocks.INFINITY_ACCESS_CHEST);
+			output.accept(ModBlocks.INFINITY_HOME_CHEST);
+		});
 
 		// Loads the saved Homes at startup so a broken save format shows up in the log immediately.
 		ServerLifecycleEvents.SERVER_STARTED.register(server ->
