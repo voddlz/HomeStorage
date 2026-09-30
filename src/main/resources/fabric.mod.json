@@ -3,9 +3,9 @@
 	"id": "homestorage",
 	"version": "${version}",
 	"name": "Home Storage",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Claim a Home with an Infinity Home Chest, then place Infinity Access Chests inside it. Every Access Chest opens the same shared, effectively unlimited storage, with search, sorting, and owner and member permissions for multiplayer.",
 	"authors": [
-		"Me!"
+		"leekwater"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
