@@ -36,9 +36,14 @@ public final class MemberManagement {
     /** Opens (or refreshes) the members screen for the owner. */
     public static void open(ServerPlayer player, StorageHome home) {
         StorageManager manager = manager(player);
-        // The owner's name may have changed since the Home was created.
-        manager.updateOwnerName(home.id(), player.nameAndId().name());
-        send(player, manager.find(home.id()).orElse(home), "");
+        boolean isOwner = home.isOwner(player.getUUID());
+        if (isOwner) {
+            // The owner's name may have changed since the Home was created. Only the real owner may update it:
+            // an op looking at someone else's Home must never rename that Home's owner to themselves.
+            manager.updateOwnerName(home.id(), player.nameAndId().name());
+        }
+        // An op can open the screen of a Home that isn't theirs; say so, so it can't be mistaken for their own.
+        send(player, manager.find(home.id()).orElse(home), isOwner ? "" : "message.homestorage.admin_view");
     }
 
     /** The owner picked an online player from the list. */

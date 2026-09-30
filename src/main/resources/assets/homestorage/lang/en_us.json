@@ -18,6 +18,7 @@
   "message.homestorage.home_restored": "Home restored.",
   "message.homestorage.no_access": "You don't have access to this Home. Owner: %s",
   "message.homestorage.not_owner": "Only %s, the owner, can manage this Home.",
+  "message.homestorage.admin_view": "Viewing as an admin: you are not the owner.",
   "message.homestorage.manage_denied": "You can't manage this Home from here.",
   "message.homestorage.member_offline": "That player is no longer online.",
   "message.homestorage.member_is_owner": "That's the owner.",
